@@ -1,7 +1,7 @@
 Python (>3.6) API for Sensirion humidity and temperature sensor SHT3x-DIS which has I2C communication
 
 # Basic Usage
-## Instatiate sensor object:
+## Instantiate sensor object:
 ```python
 import sht3xdis
 sensor = sht3xdis.TempHumiditySensor(1, 0x44)
