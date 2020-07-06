@@ -5,6 +5,7 @@ import time
 from datetime import datetime
 from MySQLdb import _mysql
 
+
 # API for sht3x-dis Humidity and Temperature I2C sensor
 # Reference datasheet:
 # https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Datasheets/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf
