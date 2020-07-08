@@ -7,11 +7,12 @@ import sht3xdis
 sensor = sht3xdis.TempHumiditySensor(1, 0x44)
 ```
 
-## Set sensor acquisition mode to either "single-shot" or "periodic":
+## Set sensor acquisition mode:
 ```python
 sensor.set_mode("single-shot", acc="high", blocking=True)
 ```
 Accuracy can be set to "low", "med" or "high"
+
 Blocking set to True waits for sensor reading to become available before proceeding
 
 ```python
@@ -23,10 +24,11 @@ Sampling rate on-board sensor can be 0.5, 1, 4 or 10 Hz
 ```python
 # Single-shot mode (non-blocking)
 sensor.init_read()
-if sensor.isready():
-  data = get_sample(degf=True)
-  temp = data[0]
-  rh = data[1]
+while True:
+  if sensor.isready():
+    data = get_sample(degf=True)
+    temp = data[0]
+    rh = data[1]
   
 # Single-shot mode (blocking)
 sensor.init_read()
