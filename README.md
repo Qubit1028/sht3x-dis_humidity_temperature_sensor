@@ -11,9 +11,7 @@ sensor = sht3xdis.TempHumiditySensor(1, 0x44)
 ```python
 sensor.set_mode("single-shot", acc="high", blocking=True)
 ```
-Accuracy can be set to "low", "med" or "high"
-
-Blocking set to True waits for sensor reading to become available before proceeding
+Accuracy can be set to "low", "med" or "high", Blocking set to True waits for sensor reading to become available before proceeding
 
 ```python
 sensor.set_mode("periodic", rate=4, acc="high")
