@@ -40,7 +40,7 @@ while True:
 ```
 
 # Data Logging
-API includes logging feautures for logging temperature and humidity data to file or SQL database
+API includes logging features for logging temperature and humidity data to file or SQL database
 
 ## Log to file
 ```python
@@ -54,6 +54,6 @@ sensor.start_logging_sql('192.168.1.1', 3306, "sampledatabase", "sampletable", 6
 ```
 Add MySQL credentials to `my.cnf` and set path `TempHumiditySensor.SQL_CREDS_PATH`
 
-# Command-line script for exporting sensor data from MySQL
+# Command-line script for exporting MySQL sensor data
 Usage example: `sensor_data_export.py -f <path-to-outfile> -t <table> --maxsamples 1000`
 
