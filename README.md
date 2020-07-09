@@ -27,6 +27,7 @@ while True:
     data = get_sample(degf=True)
     temp = data[0]
     rh = data[1]
+    sensor.init_read()
   
 # Single-shot mode (blocking)
 sensor.init_read()
